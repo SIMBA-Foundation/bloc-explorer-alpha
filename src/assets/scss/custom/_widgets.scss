@@ -1,0 +1,251 @@
+/*========= Widgets Scss ==========*/
+
+.dialog .card__title {
+    font-size: 1.25rem; //20px;
+    font-weight: bold;
+}
+.list-complete-item {
+    width: 100%;
+    display: flex;
+    .mb-2 {
+        padding-top: 12px;
+    }
+    .news-time {
+        padding-top: 12px;
+    }
+}
+
+.block-detail {
+    p {
+        padding: 0px 0px 10px 0px;
+        margin: 0px;
+        line-height: 1.5;
+    }
+    .v-btn,
+    .v-btn--small {
+        font-size: 12px;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+        font-weight: normal;
+        color: #5d92f4;
+        &:hover,
+        &:before:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+.breadcrumbs-box {
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 12px;
+    font-size: 12px;
+    h2 {
+        font-size: 16px;
+    }
+    .breadcrumb-title {
+        font-weight: 500;
+        display: flex;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        -webkit-box-pack: center;
+        align-items: center;
+        font-size: 1em;
+    }
+    .v-breadcrumbs {
+        padding: 0px;
+        .v-breadcrumbs__divider {
+            padding: 0px 5px;
+        }
+    }
+}
+
+.top-blocks-widget,
+.top-transactions-widget {
+    .v-list {
+        > div {
+            &:not(:last-child) {
+                border-bottom: 1px solid $border-color;
+            }
+        }
+        .v-list__tile {
+            height: auto;
+            padding: 1.25rem;
+        }
+        .block-head {
+            min-width: 135px;
+            min-height: 68px;
+            background: gray;
+            position: relative;
+            span {
+                display: inline-block;
+                font-size: 14px;
+                padding-top: 20px;
+                text-align: center;
+            }
+        }
+        .v-btn {
+            padding: 0px !important;
+            margin: 0px !important;
+            font-weight: normal;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+        }
+        span {
+            .v-btn {
+                min-width: auto;
+                height: 16px;
+                line-height: 16px;
+            }
+        }
+        .list-time {
+            width: 90px;
+            padding-top: 20px;
+        }
+    }
+    .hash-tag {
+        width: 40%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+    @media (max-width: 500px) {
+        .v-list {
+            .news-content {
+                display: block !important;
+                .v-list__tile {
+                    display: block !important;
+                    .img-wrap {
+                        margin: 0 0 1rem 0 !important;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                .list-time {
+                    width: 100% !important;
+                    justify-content: flex-start !important;
+                }
+            }
+        }
+    }
+}
+
+.app-event-detail {
+    .event-tab-wrapper {
+        .event-heading-wrap {
+            opacity: 0.925;
+            padding: 1.5rem 1.5rem 0 1.5rem;
+            background-color: #454545;
+            ul {
+                li.event-tab {
+                    display: inline-block;
+                    a {
+                        color: $light;
+                        letter-spacing: 0.23px;
+                        font-weight: $font-weight-semi-bold;
+                        font-size: $font-size-sm;
+                        line-height: 20px;
+                        text-align: center;
+                        padding: 0.65rem 0.9rem;
+                        border-radius: 3px 3px 0 0;
+                    }
+                    &.active {
+                        a {
+                            background-color: $light;
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tab-content-wrap {
+        .app-event-item {
+            border-left-width: 8px;
+            border-left-style: solid;
+            margin-bottom: 2px;
+            background-color: $base-light;
+            transition: all 0.3s linear;
+            .v-list__tile__action {
+                opacity: 0;
+                transition: opacity 0.3s linear;
+            }
+            &:hover {
+                background-color: $light;
+                box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.18);
+                .v-list__tile__action {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .info-border {
+        border-color: $info !important;
+    }
+    .success-border {
+        border-color: $success !important;
+    }
+    .danger-border {
+        border-color: $danger !important;
+    }
+    .warning-border {
+        border-color: $warning !important;
+    }
+    .primary-border {
+        border-color: $primary !important;
+    }
+}
+
+.bg-sc {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 4rem 1rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+}
+.start-screen-wrapper {
+    background-image: url("/static/img/bg-1.png");
+    @extend .bg-sc;
+}
+.start-screen-block {
+    .input-group,
+    input[type="password"] {
+        label {
+            color: $light !important;
+        }
+    }
+    .input-group__details::before {
+        background-color: $light !important;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h4 {
+        line-height: 2;
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
