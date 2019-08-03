@@ -36,15 +36,25 @@ import serviceConfig from "./config";
 
 router.beforeEach((to, from, next) => {
     Nprogress.start();
-    if (to.path.toLocaleLowerCase() === "/home") {
-        Vue.use(VueNativeSock, serviceConfig.ws_api, {
-            reconnection: true,
-            reconnectionAttempts: 5,
-            reconnectionDelay: 3000,
-            store: store
-        });
+    if (serviceConfig.api != "" && serviceConfig.ws_api != "") {
+        if (to.path.toLocaleLowerCase() === "/home") {
+            Vue.use(VueNativeSock, serviceConfig.ws_api, {
+                reconnection: true,
+                reconnectionAttempts: 5,
+                reconnectionDelay: 3000,
+                store: store
+            });
+        }
+        next();
+    } else {
+        if (to.path.toLocaleLowerCase() !== "/started") {
+            next({
+                path: "started"
+            });
+        } else {
+            next();
+        }
     }
-    next();
 });
 
 router.afterEach((to, from) => {

@@ -13,4 +13,16 @@ function post(path, data) {
         console.log(error);
     });
 }
-export default {};
+export default {
+    getBlock(hash, callback) {
+        post("/", {
+            method: "getBlock",
+            params: {
+                hash: hash
+            },
+            id: new Date().getTime()
+        }).then(res => {
+            callback.call(null, res.data);
+        });
+    }
+};

@@ -5,8 +5,6 @@ import VuePerfectScrollbar from "vue-perfect-scrollbar";
 import AppSectionLoader from "Components/AppSectionLoader/AppSectionLoader";
 import { RotateSquare2 } from "vue-loading-spinner";
 
-import DeleteConfirmationDialog from "Components/DeleteConfirmationDialog/DeleteConfirmationDialog";
-
 // page title bar
 import PageTitleBar from "Components/PageTitleBar/PageTitleBar";
 
