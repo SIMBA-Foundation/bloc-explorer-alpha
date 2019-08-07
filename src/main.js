@@ -36,6 +36,7 @@ import serviceConfig from "./config";
 
 router.beforeEach((to, from, next) => {
     Nprogress.start();
+    
     if (serviceConfig.api != "" && serviceConfig.ws_api != "") {
         if (to.path.toLocaleLowerCase() === "/home") {
             Vue.use(VueNativeSock, serviceConfig.ws_api, {

@@ -3,6 +3,7 @@ import BoxedLayout from "Container/BoxedV2";
 // Blockcloud Explorer components
 const Home = () => import("Views/Home");
 const Block = () => import("Views/blockchain/Block");
+const AllBlocks = () => import("Views/blockchain/Allblocks");
 export default {
     path: "/",
     component: BoxedLayout,
@@ -23,6 +24,14 @@ export default {
             meta: {
                 title: "message.block",
                 breadcrumb: "Home / Block"
+            }
+        },
+        {
+            component: AllBlocks,
+            path: "/Blockchain/blocks",
+            meta: {
+                title: "message.blocks",
+                breadcrumb: "Home / Blocks"
             }
         }
     ]

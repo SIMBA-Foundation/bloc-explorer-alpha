@@ -24,5 +24,17 @@ export default {
         }).then(res => {
             callback.call(null, res.data);
         });
+    },
+    getBlocks(params, callback) {
+        post("/", {
+            method: "getBlocks",
+            params: {
+                pageSize: params.pageSize || 20,
+                pageNum: params.pageNum
+            },
+            id: new Date().getTime()
+        }).then(res => {
+            callback.call(null, res.data);
+        });
     }
 };
