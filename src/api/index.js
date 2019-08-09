@@ -36,5 +36,28 @@ export default {
         }).then(res => {
             callback.call(null, res.data);
         });
+    },
+    getTransactions(params, callback) {
+        post("/", {
+            method: "getTransactions",
+            params: {
+                pageSize: params.pageSize || 20,
+                pageNum: params.pageNum
+            },
+            id: new Date().getTime()
+        }).then(res => {
+            callback.call(null, res.data);
+        });
+    },
+    getTransaction(hash, callback) {
+        post("/", {
+            method: "getTransaction",
+            params: {
+                hash: hash
+            },
+            id: new Date().getTime()
+        }).then(res => {
+            callback.call(null, res.data);
+        });
     }
 };
