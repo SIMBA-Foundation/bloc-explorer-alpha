@@ -59,5 +59,28 @@ export default {
         }).then(res => {
             callback.call(null, res.data);
         });
+    },
+    getLevels(params, callback) {
+        post("/", {
+            method: "getLevels",
+            params: {
+                pageSize: params.pageSize || 20,
+                pageNum: params.pageNum
+            },
+            id: new Date().getTime()
+        }).then(res => {
+            callback.call(null, res.data);
+        });
+    },
+    getAddress(hash, callback) {
+        post("/", {
+            method: "getAddress",
+            params: {
+                hash: hash
+            },
+            id: new Date().getTime()
+        }).then(res => {
+            callback.call(null, res.data);
+        });
     }
 };

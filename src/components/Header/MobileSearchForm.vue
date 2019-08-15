@@ -9,7 +9,7 @@
           dark
           v-model="search"
           prepend-icon="search"
-          placeholder="What are you looking for.."
+          placeholder="Search by Address / Txhash / Block "
           autocomplete="true"
           @click.stop="onClickSearch"
           color="white"
@@ -32,9 +32,7 @@ export default {
     ...mapGetters(["mobileSearchForm"])
   },
   methods: {
-    onClickSearch() {
-      console.log("work");
-    },
+    onClickSearch() {},
     toggleSearchForm() {
       this.$store.dispatch("toggleSearchForm");
     }

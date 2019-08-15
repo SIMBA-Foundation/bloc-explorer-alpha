@@ -6,6 +6,8 @@ const Block = () => import("Views/blockchain/Block");
 const AllBlocks = () => import("Views/blockchain/Allblocks");
 const Transaction = () => import("Views/blockchain/Transaction");
 const AllTransactions = () => import("Views/blockchain/AllTransactions");
+const Levels = () => import("Views/blockchain/Levels");
+const Address = () => import("Views/blockchain/Address");
 export default {
     path: "/",
     component: BoxedLayout,
@@ -50,6 +52,22 @@ export default {
             meta: {
                 title: "message.transactions",
                 breadcrumb: "Home / Transactions"
+            }
+        },
+        {
+            component: Levels,
+            path: "/Blockchain/Levels/",
+            meta: {
+                title: "message.chainLevels",
+                breadcrumb: "Home / Levels"
+            }
+        },
+        {
+            component: Address,
+            path: "/Blockchain/Address/:hash",
+            meta: {
+                title: "message.address",
+                breadcrumb: "Home / Address"
             }
         }
     ]
