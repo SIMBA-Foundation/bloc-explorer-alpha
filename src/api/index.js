@@ -82,5 +82,16 @@ export default {
         }).then(res => {
             callback.call(null, res.data);
         });
+    },
+    search(keyword, callback) {
+        post("/", {
+            method: "search",
+            params: {
+                keyword: keyword
+            },
+            id: new Date().getTime()
+        }).then(res => {
+            callback.call(null, res.data);
+        });
     }
 };
