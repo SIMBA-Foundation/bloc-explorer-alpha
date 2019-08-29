@@ -1,0 +1,6 @@
+/*=========== Background Mixin ===========*/
+@mixin bg-variant($parent, $color) {
+    #{$parent} {
+        background-color: $color !important;
+    }
+}

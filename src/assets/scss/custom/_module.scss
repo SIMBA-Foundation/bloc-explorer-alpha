@@ -1,0 +1,14 @@
+/*======== Module Scss ========*/
+
+.border-rad-0.card {
+    @include border(1px solid, $input-border-color, right);
+}
+.flex-nowrap {
+    flex-wrap: nowrap !important;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse !important;
+}
+.h-vh-100 {
+    height: 100vh;
+}

@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+.project
+.vscode
+**/.sass-cache/*
+.compass.pid
+.sass-cache
+node_modules
+package-lock.json
