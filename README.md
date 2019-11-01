@@ -1,6 +1,10 @@
 # bloc-explorer-alpha
 
-This is Blockcloud’s blockchain browser
+This is Blockcloud’s blockchain browser based on the Blockcloud Api Service project.
+
+## Blockcloud Api Service
+
+This is merely a backend service, which tracks and synchronizes full node data of Blockcloud’s blockchain, and provides JSON-RPC and WebSockets services.
 
 ## Getting started
 
