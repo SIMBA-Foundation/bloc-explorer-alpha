@@ -18,6 +18,8 @@ This is merely a backend service, which tracks and synchronizes full node data o
 
 run `npm run serve`, wait for it to finish and once it finishes access http://localhost:8089/ to run Blockcloud Blockchain Explorer on browser. The app will automatically reload if you make any changes in any of the source file.
 
+If it cannot be started, try the following command:`npm rebuild node-sass`
+
 ### Building:
 
 run `npm run build`, to build the Blockcloud Blockchain Explorer and wait for it to finish. The build will be stored in the `dist/` directory.

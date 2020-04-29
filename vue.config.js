@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    baseUrl: process.env.NODE_ENV == 'production' ? '/' :  '/',
+    publicPath: process.env.NODE_ENV == 'production' ? '/' :  '/',
     devServer: {
         open: process.platform === 'darwin',
         host: '127.0.0.1',
